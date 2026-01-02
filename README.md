@@ -1,73 +1,75 @@
-# React + TypeScript + Vite
+🚀 Rahul Maurya – Developer Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+React • TypeScript • Vite
 
-Currently, two official plugins are available:
+This repository contains my personal developer portfolio, built using React + TypeScript + Vite, to showcase my skills, projects, and professional profile.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+The portfolio is designed with a clean, responsive UI and focuses on real-world projects, automation expertise, and web development capabilities.
 
-## React Compiler
+🔗 Live Demo
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+👉 Portfolio Website:
+(Add your deployed link here – Netlify / Vercel)
 
-## Expanding the ESLint configuration
+👨‍💻 About Me
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+I am a Machine Learning & Python Automation Developer with a strong interest in building efficient, scalable, and user-friendly applications.
+This portfolio highlights my experience in:
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+Python Automation
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+Web Development (React & Django)
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+AI / Machine Learning fundamentals
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+SEO & Web Optimization
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+🛠️ Tech Stack
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Frontend: React, TypeScript, HTML5, CSS3
+
+Build Tool: Vite
+
+Version Control: Git & GitHub
+
+Deployment: Netlify / Vercel (recommended)
+
+📂 Portfolio Sections
+
+Hero Section – Introduction & call-to-action
+
+About Me – Background, education, and certifications
+
+Skills – Categorized technical skills
+
+Projects – Real-world & self-built projects
+
+Contact – Direct links (Email, Fiverr, LinkedIn)
+
+📌 Featured Projects
+
+Some highlighted projects included in this portfolio:
+
+Excel Automation Tool – Python-based automation for Excel & CSV processing
+
+CareerConnect – Django-based job & career platform
+
+Web Scraping Scripts – Structured data extraction (ethical & permission-based)
+
+Machine Learning Models – Basic prediction & analysis workflows
+
+⚙️ Getting Started (Local Setup)
+1️⃣ Clone the repository
+git clone https://github.com/Rahulmaurya1234/my-portfolio.git
+cd my-portfolio
+
+2️⃣ Install dependencies
+npm install
+
+3️⃣ Run the development server
+npm run dev
+
+
+Open in browser:
+
+http://localhost:5173
