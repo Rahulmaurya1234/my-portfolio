@@ -1,37 +1,46 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const Navbar: React.FC = () => {
   const [open, setOpen] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
+  // Window resize check
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth < 768);
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   const scrollToSection = (id: string) => {
     const section = document.getElementById(id);
     section?.scrollIntoView({ behavior: "smooth" });
-    setOpen(false); // mobile me click ke baad menu band
+    setOpen(false); // menu close on mobile after click
   };
 
   return (
     <nav style={styles.nav}>
       {/* LOGO */}
-      <div
-        style={styles.logo}
-        onClick={() => scrollToSection("hero")}
-      >
+      <div style={styles.logo} onClick={() => scrollToSection("hero")}>
         Rahul Maurya
       </div>
 
-      {/* HAMBURGER (mobile only) */}
-      <div
-        style={styles.hamburger}
-        onClick={() => setOpen(!open)}
-      >
-        ☰
-      </div>
+      {/* HAMBURGER */}
+      {isMobile && (
+        <div style={styles.hamburger} onClick={() => setOpen(!open)}>
+          ☰
+        </div>
+      )}
 
       {/* MENU */}
       <ul
         style={{
           ...styles.menu,
-          ...(open ? styles.menuOpen : {}),
+          ...(isMobile
+            ? open
+              ? styles.menuOpen
+              : { display: "none" }
+            : {}), // desktop always show
         }}
       >
         <li onClick={() => scrollToSection("about")}>About</li>
@@ -51,8 +60,8 @@ const styles: { [key: string]: React.CSSProperties } = {
     display: "flex",
     justifyContent: "space-between",
     alignItems: "center",
-    padding: "16px 48px",
-    background: "rgba(15, 23, 42, 0.9)",
+    padding: "16px 24px",
+    background: "rgba(15, 23, 42, 0.95)",
     backdropFilter: "blur(8px)",
     borderBottom: "1px solid #1e293b",
   },
@@ -66,7 +75,6 @@ const styles: { [key: string]: React.CSSProperties } = {
   },
 
   hamburger: {
-    display: "none", // desktop hidden
     fontSize: "26px",
     cursor: "pointer",
     color: "#e5e7eb",
@@ -79,15 +87,18 @@ const styles: { [key: string]: React.CSSProperties } = {
     gap: "28px",
     cursor: "pointer",
     fontSize: "16px",
+    margin: 0,
+    padding: 0,
   },
 
   /* MOBILE MENU OPEN STATE */
   menuOpen: {
     position: "absolute",
     top: "64px",
-    right: "0",
+    right: 0,
     background: "#020617",
     flexDirection: "column",
+    display: "flex",
     width: "200px",
     padding: "20px",
     gap: "16px",
