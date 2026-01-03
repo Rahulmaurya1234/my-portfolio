@@ -7,7 +7,7 @@
 
 html, body {
   width: 100%;
-  overflow-x: hidden; /* horizontal scroll prevent */
+  overflow-x: hidden;
   font-family: system-ui, sans-serif;
   background: #0f172a;
   color: white;
@@ -22,7 +22,6 @@ a {
 #root {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 0;
 }
 
 /* NAVBAR */
@@ -63,7 +62,7 @@ nav ul li {
   font-size: 16px;
 }
 
-/* MOBILE NAV MENU */
+/* MOBILE NAV */
 @media (max-width: 768px) {
   nav ul {
     flex-direction: column;
@@ -78,7 +77,9 @@ nav ul li {
   }
 }
 
-/* HERO */
+/* ================= HERO ================= */
+
+/* MOBILE DEFAULT */
 section#hero {
   display: flex;
   flex-wrap: wrap;
@@ -90,6 +91,7 @@ section#hero {
   text-align: center;
 }
 
+/* HERO CONTENT */
 .hero-left {
   max-width: 600px;
 }
@@ -148,19 +150,47 @@ button.secondary {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 20px;
 }
 
 .hero-right img {
   width: 100%;
   max-width: 320px;
-  height: auto;
   border-radius: 16px;
   border: 1px solid #1e293b;
   box-shadow: 0 10px 30px rgba(0,0,0,0.35);
 }
 
-/* ABOUT & CONTACT SECTIONS */
+/* ================= DESKTOP FIX ================= */
+@media (min-width: 769px) {
+  section#hero {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+
+    /* root ke center me proper width */
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 80px 40px;
+    gap: 120px;
+  }
+
+  .hero-left {
+    flex: 1;
+  }
+
+  .hero-right {
+    flex: 1;
+    justify-content: flex-end;
+  }
+
+  .hero-left .buttons {
+    justify-content: flex-start;
+  }
+}
+
+/* ================= SECTIONS ================= */
+
 section {
   padding: 80px 20px;
   max-width: 900px;
@@ -180,104 +210,6 @@ section p {
   margin-bottom: 18px;
 }
 
-section .highlight {
-  color: #e5e7eb;
-  font-weight: 500;
-  margin-top: 26px;
-}
-
-/* CONTACT BUTTONS */
-section#contact .buttons {
-  display: flex;
-  justify-content: center;
-  gap: 16px;
-  flex-wrap: wrap;
-}
-
-section#contact .buttons a {
-  padding: 12px 26px;
-  border-radius: 8px;
-  font-size: 16px;
-  font-weight: 600;
-  cursor: pointer;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.35);
-  transition: all 0.2s ease;
-}
-
-section#contact .primary {
-  background: #38bdf8;
-  color: #020617;
-}
-
-section#contact .secondary {
-  background: #020617;
-  color: #38bdf8;
-  border: 1px solid #38bdf8;
-}
-
-section#contact .outline {
-  background: transparent;
-  color: #e5e7eb;
-  border: 1px solid #1e293b;
-}
-
-/* SKILLS SECTION */
-section#skills {
-  text-align: center;
-  padding: 80px 20px;
-}
-
-section#skills h2 {
-  margin-bottom: 12px;
-}
-
-section#skills p {
-  margin-bottom: 48px;
-  color: #9ca3af;
-}
-
-/* SKILLS WRAPPER */
-.skills-wrapper {
-  display: flex;
-  flex-direction: column;
-  gap: 48px;
-  align-items: center;
-  max-width: 1100px;
-  margin: 0 auto;
-}
-
-.skills-group {
-  width: 100%;
-  max-width: 1000px;
-  text-align: center;
-}
-
-.skills-group h3 {
-  font-size: 22px;
-  margin-bottom: 20px;
-  color: #e5e7eb;
-}
-
-.skills-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-  gap: 16px;
-  justify-content: center;
-}
-
-.skills-card {
-  background: #020617;
-  border: 1px solid #1e293b;
-  padding: 14px 16px;
-  border-radius: 10px;
-  font-size: 15px;
-  font-weight: 500;
-  color: #cbd5f5;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.35);
-  text-align: center;
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
-
 /* FOOTER */
 footer {
   padding: 24px;
@@ -286,33 +218,8 @@ footer {
   color: #9ca3af;
 }
 
-/* RESPONSIVE MEDIA QUERIES */
+/* MOBILE TEXT SCALE */
 @media (max-width: 768px) {
-  section h2 {
-    font-size: 28px;
-  }
-
-  section p {
-    font-size: 16px;
-  }
-
-  .hero-left h1 {
-    font-size: 28px;
-  }
-
-  .hero-left h2 {
-    font-size: 18px;
-  }
-
-  .hero-left p {
-    font-size: 14px;
-  }
-
-  .hero-right {
-    margin-top: 20px;
-  }
-
-  nav ul {
-    gap: 12px;
-  }
+  .hero-left h1 { font-size: 28px; }
+  .hero-left h2 { font-size: 18px; }
 }
