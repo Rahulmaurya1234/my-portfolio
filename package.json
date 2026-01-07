@@ -3,17 +3,23 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+
+  "homepage": "https://rahulmaurya1234.github.io/my-portfolio",
+
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
-    "lint": "eslint .",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
+    "lint": "eslint .",
     "preview": "vite preview"
   },
+
   "dependencies": {
     "react": "^19.2.0",
     "react-dom": "^19.2.0"
   },
+
   "devDependencies": {
     "@eslint/js": "^9.39.1",
     "@types/node": "^24.10.1",
