@@ -1,29 +1,14 @@
 const Projects: React.FC = () => {
   const projects = [
     {
-      title: "Excel Automation Tool",
+      title: "Market Anomaly Detection & Surveillance System",
       description:
-        "Built a Python automation script to clean data, merge multiple Excel/CSV files, and generate reports automatically.",
-      tech: ["Python", "Pandas", "Excel"],
-      github: "https://github.com/yourusername/excel-automation",
+        "A production-ready market anomaly detection system using Z-Score and Isolation Forest with FastAPI backend, React dashboard, and analyst-driven investigation workflow.",
+      tech: ["Python", "Pandas", "Isolation Forest", "FastAPI", "React.js"],
+      github: "https://github.com/Rahulmaurya1234/market-anomaly-detection",
       demo: "#",
     },
-    {
-      title: "Data Processing Pipeline",
-      description:
-        "Created a Python-based data processing workflow to handle large datasets, perform validation, and produce clean outputs.",
-      tech: ["Python", "Pandas", "NumPy"],
-      github: "https://github.com/yourusername/data-pipeline",
-      demo: "#",
-    },
-    {
-      title: "Web Scraping Script",
-      description:
-        "Developed a permission-based web scraping script to extract structured data for analysis and reporting.",
-      tech: ["Python", "BeautifulSoup", "Requests"],
-      github: "https://github.com/yourusername/web-scraper",
-      demo: "#",
-    },
+    
     {
       title: "Personal Portfolio Website",
       description:
