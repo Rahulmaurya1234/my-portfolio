@@ -36,7 +36,7 @@ const Hero: React.FC = () => {
         </h1>
 
         <h2 style={{ ...styles.subtitle, fontSize: isMobile ? 20 : 26 }}>
-          Machine Learning & Python Automation Developer
+         Full Stack Developer | Backend Systems | Python & Automation
         </h2>
 
         <p style={{ ...styles.desc, fontSize: isMobile ? 14 : 18 }}>
