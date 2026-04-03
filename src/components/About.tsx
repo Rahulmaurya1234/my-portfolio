@@ -4,10 +4,10 @@ const About: React.FC = () => {
       <h2 style={styles.heading}>About Me</h2>
 
       <p style={styles.text}>
-        I am a Python developer with a strong focus on automation,
-        data processing, and AI/ML fundamentals. I enjoy building
-        practical solutions that reduce manual effort and improve
-        system efficiency.
+        I am a full-stack developer with experience in the MERN stack (MongoDB, Express.js, React, Node.js) and a strong foundation in Python for automation and data processing. I enjoy building scalable and efficient applications that reduce manual effort and improve system performance. 
+
+        I am passionate about solving real-world problems through technology and continuously enhancing my skills by working on practical, production-level projects.
+
       </p>
 
       <p style={styles.text}>
