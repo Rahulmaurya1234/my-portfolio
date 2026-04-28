@@ -1,4 +1,4 @@
-🚀 Rahul Maurya – Developer Portfolio
+ Rahul Maurya – Developer Portfolio
 
 React • TypeScript • Vite
 
@@ -8,10 +8,10 @@ The portfolio is designed with a clean, responsive UI and focuses on real-world 
 
 🔗 Live Demo
 
-👉 Portfolio Website:
-(Add your deployed link here – Netlify / Vercel)
+ Portfolio Website:
+[(Add your deployed link here – Netlify / Vercel)](https://rahulmaurya1234.github.io/my-portfolio/)
 
-👨‍💻 About Me
+## About Me
 
 I am a Machine Learning & Python Automation Developer with a strong interest in building efficient, scalable, and user-friendly applications.
 This portfolio highlights my experience in:
@@ -46,7 +46,7 @@ Projects – Real-world & self-built projects
 
 Contact – Direct links (Email, Fiverr, LinkedIn)
 
-📌 Featured Projects
+## Featured Projects
 
 Some highlighted projects included in this portfolio:
 
@@ -58,15 +58,15 @@ Web Scraping Scripts – Structured data extraction (ethical & permission-based)
 
 Machine Learning Models – Basic prediction & analysis workflows
 
-⚙️ Getting Started (Local Setup)
-1️⃣ Clone the repository
+## Getting Started (Local Setup)
+## 1️ Clone the repository
 git clone https://github.com/Rahulmaurya1234/my-portfolio.git
 cd my-portfolio
 
-2️⃣ Install dependencies
+## 2️ Install dependencies
 npm install
 
-3️⃣ Run the development server
+## 3️ Run the development server
 npm run dev
 
 
